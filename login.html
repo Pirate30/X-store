@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>X Store - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <!-- nav section -->
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="/imgs/x(1)rbg.png"  width="160px" ></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li ><a href="index.html">HOME</a></li> 
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="#footer">CONTACT</a></li>
+                        <li class="active"><a href="login.html">ACCOUNT</a></li>
+                        
+                    </ul>
+                </nav>
+                <a href="cart.html"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i></a>
+                <img src="imgs/menu.png" alt="" width="33px" class="menu" onclick="menufun()">
+            </div>
+        </div>
+     
+<!--end of nav section -->
+
+
+<!-- login / logout section -->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="imgs/PngItem_196869.png" alt="" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()" class="log-in">LogIn</span>
+                        <span onclick="signup()">SignUp</span>
+                        
+                    </div>
+                    <hr id="indicator">
+                    <form id="formLog">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">forgot password?</a>
+                    </form>
+                    <form id="formSign">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>  
+<!-- end of login / logout section -->
+
+
+
+<!-- footer section -->
+    
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Get X-Store In your Phone</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="app-logo">
+                        <img src="imgs/playstoer.png" alt="">
+                        <img src="imgs/appstore.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="imgs/x(1)rbg.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sit accusamus accusantium inventore, culpa delectus ex quidem amet consectetur nam!</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Usefuul Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blogposts</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>FOLLOW US</h3>
+                    <ul>
+                        <i class="fa fa-facebook-square fa-2x"></i>
+                        <i class="fa fa-instagram fa-2x" ></i>
+                        <i class="fa fa-twitter-square fa-2x"></i>
+                        <i class="fa fa-youtube-square fa-2x"></i>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright@2021 priteshthakkar</p>
+        </div>
+    </div>
+
+    <!--end of footer section -->
+
+    <!-- js section -->
+    <script>
+        const menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px"
+
+        function menufun(){
+            if(menuItems.style.maxHeight == "0px"){
+                menuItems.style.maxHeight = "200px"
+            }
+            else{
+                menuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!-- js for indicator toggling -->
+
+    <script>
+        var formLog = document.getElementById("formLog");
+        var formSign = document.getElementById("formSign");
+        var indicator = document.getElementById("indicator");
+
+        function signup(){
+            formSign.style.transform = "translateX(0px)";
+            formLog.style.transform= "translateX(0px)";
+            indicator.style.transform="translateX(120px)";
+        }
+        function login(){
+            // login.classList.add("active");
+            formSign.style.transform = "translateX(300px)";
+            formLog.style.transform = "translateX(300px)";
+            indicator.style.transform="translateX(-7px)";
+        }
+
+        // var login = document.getElementsByClassName("log-in");
+        
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
